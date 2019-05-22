@@ -10,7 +10,7 @@ if os.getuid() != 0:
 	sys.exit()
 
 
-packet = Ether(dst='ff:ff:ff:ff:ff:ff')/ARP(pdst='192.168.1.117')
+packet = Ether(dst='ff:ff:ff:ff:ff:fe')/ARP(pdst='192.168.1.117')
 result = srp(packet)
 
 print(result[0][0][0].show())
